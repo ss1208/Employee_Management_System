@@ -13,6 +13,6 @@ pip3 install -r requirements.txt
 python manage.py runserver
 ``` 
 
-**For more details please refer to the video tutorial...**<br/>
+
 
 <br/>
