@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.css">
+
+
+    <link rel="stylesheet" href="/static/assets/css/templatemo-training-studio.css">
+      <style>
+        body {
+          font-family: Arial;
+          font-size: 50px;
+        }
+        
+        #container {
+          margin: 50px 0 0 0;
+          text-align: center;
+        }
+        
+        #text {
+          display: inline-block;
+          color: #fff;
+          border-right: 3px solid #2980b9;
+          font-size: 4rem;
+        }
+        
+        @media only screen and (max-width: 600px) {
+          #text {
+            font-size: 2rem;
+          }
+        }
+      </style>
+    </head>
+    
+    <body>
+    
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <div class="main-banner" id="top" >
+        <video autoplay muted loop id="bg-video">
+            <source src="../static/assets/img/video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption" id="container">
+
+
+               <p class="line-1 anim-typewriter para" id="text"><b>Employee Management System</b></p>
+                <div class="main-button scroll-to-section">
+                    <a href="/capture">Login</a>
+                </div>
+                <div class="main-button scroll-to-section">
+                    <a href="/attendance">Take Attendance</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/assets/js/jquery-2.1.0.min.js"></script>
+    <script src="../static/assets/js/popper.js"></script>
+    <script src="../static/assets/js/bootstrap.min.js"></script>
+    <script src="../static/assets/js/scrollreveal.min.js"></script>
+    <script src="../static/assets/js/waypoints.min.js"></script>
+    <script src="../static/assets/js/jquery.counterup.min.js"></script>
+    <script src="../static/assets/js/imgfix.min.js"></script> 
+    <script src="../static/assets/js/mixitup.js"></script> 
+    <script src="../static/assets/js/accordions.js"></script>
+    
+
+    <script src="/static/assets/js/custom.js"></script>
+    <script type="text/javascript">
+
+      var _CONTENT = [ "Employee Management System" ];
+      
+
+      var _PART = 0;
+    
+      var _PART_INDEX = 0;
+      
+
+      var _INTERVAL_VAL;
+      
+
+      var _ELEMENT = document.querySelector("#text");
+      
+      function Type() { 
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
+      
+        if(text === _CONTENT[_PART]) {
+          clearInterval(_INTERVAL_VAL);
+          setTimeout(function() {
+            _INTERVAL_VAL = setInterval(Delete, 50);
+          }, 1000);
+        }
+      }
+      
+      function Delete() {
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
+      
+        if(text === '') {
+          clearInterval(_INTERVAL_VAL);
+      
+
+          if(_PART == (_CONTENT.length - 1))
+            _PART = 0;
+          else
+            _PART++;
+          _PART_INDEX = 0;
+      
+           setTimeout(function() {
+            _INTERVAL_VAL = setInterval(Type, 100);
+          }, 200);
+        }
+      }
+      
+
+      _INTERVAL_VAL = setInterval(Type, 100);
+      
+      </script>
+  </body>
+</html>

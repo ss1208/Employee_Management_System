@@ -1,0 +1,92 @@
+{% load active_link_tags %}
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            {% if user.user_type == '1' %}
+            <ul>
+                <li class="menu-title">
+                    <span>Main Menu</span>
+                </li>
+                <li class="{% active_link 'head_home' 'active' %}">
+                    <a href="{% url 'head_home' %}"><i class="fas fa-holly-berry"></i> <span>Dashboard</span></a>
+                </li>
+                <li class="submenu {% active_link 'add_employee' 'active' %} {% active_link 'view_employee' 'active' %}">
+                    <a href="#"><i class="fas fa-user-graduate"></i> <span> Employees</span> <span
+                            class="menu-arrow"></span></a>
+                    <ul>
+                        <li><a href="{% url 'add_employee' %}">Add Employee</a></li>
+                        <li><a href="{% url 'view_employee' %}">View Employee</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="submenu {% active_link 'add_profession' 'active' %} {% active_link 'view_profession' 'active' %}">
+                    <a href="#"><i class="fa fa-graduation-cap"></i> <span> Profession</span> <span
+                            class="menu-arrow"></span></a>
+                    <ul>
+                        <li><a href="{% url 'add_profession' %}">Add Profession</a></li>
+                        <li><a href="{% url 'view_profession' %}">View Profession</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li class="{% active_link 'employee_send_notification' 'active' %}">
+                    <a href="{% url 'employee_send_notification' %}"><i class="fa fa-bell"></i> <span>Send Employee Notification</span></a>
+                </li>
+                <li class="{% active_link 'active' %}">
+                    <a href="/employee_management_system/Attendance.csv"><i class="fa fa-database"></i> <span>Download Attendance Sheet</span></a>
+                </li>
+
+
+                <li class="{% active_link 'reply_employee_feedback' 'active' %}">
+                    <a href="{% url 'reply_employee_feedback' %}"><i class="fas fa-comments"></i>
+                        <span>Employee Feedback</span></a>
+                </li>
+
+                <li class="{% active_link 'employee_leave' 'active' %}">
+                    <a href="{% url 'employee_leave_view' %}"><i class="fas fa-envelope"></i> <span>Employee Leave</span></a>
+                </li>
+                <li class="{% active_link 'logout' 'active' %}">
+                    <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+                </li>
+
+            </ul>
+
+            {% else %}
+
+            <ul>
+                <li class="menu-title">
+                    <span>Main Menu</span>
+                </li>
+                <li class="{% active_link 'employee_home' 'active' %}">
+                    <a href="{% url 'employee_home' %}"><i class="fas fa-holly-berry"></i> <span>Dashboard</span></a>
+                </li>
+
+
+
+
+                <li class="{% active_link 'apply_leave' 'active' %}">
+                    <a href="{% url 'apply_leave' %}"><i class="fas fa-comments"></i>
+                        <span>Apply For Leave</span></a>
+                </li>
+                <li class="{% active_link 'employee_feedback' 'active' %}">
+                    <a href="{% url 'employee_feedback' %}"><i class="fas fa-comments"></i>
+                        <span>Send Feedback</span></a>
+                </li>
+
+                <li class="{% active_link 'employee_notification' 'active' %}">
+                    <a href="{% url 'employee_notification' %}"><i class="fas fa-bell"></i> <span>Notifications</span></a>
+                </li>
+
+                <li class="{% active_link 'logout' 'active' %}">
+                    <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+                </li>
+
+            </ul>
+
+            {% endif %}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+{%  extends 'base.html' %}
+{% block content %}
+<div class="page-header">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-title">Welcome to the website!</h3>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 d-flex">
+        <div class="card flex-fill">
+            <div class="card-header">
+                <h5 class="card-title">Featured Locations</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-center">
+                        <thead class="thead-light">
+                        <tr>
+                            <th>Place</th>
+                            <th>Positions</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Bay Area</div>
+                            </td>
+                            <td class="text-nowrap">844</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Seattle Area</div>
+                            </td>
+                            <td class="text-nowrap">4376</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Vancouver</div>
+                            </td>
+                            <td class="text-nowrap">250</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>New York</div>
+                            </td>
+                            <td class="text-nowrap">354</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Sao Paulo</div>
+                            </td>
+                            <td class="text-nowrap">44</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Munich</div>
+                            </td>
+                            <td class="text-nowrap">125</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Bangalore</div>
+                            </td>
+                            <td class="text-nowrap">589</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Hyderabad</div>
+                            </td>
+                            <td class="text-nowrap">702</td>
+
+                        </tr>
+                        <tr>
+                            <td class="text-nowrap">
+                                <div>Mumbai</div>
+                            </td>
+                            <td class="text-nowrap">41</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 d-flex">
+        <div class="card flex-fill">
+            <div class="card-header">
+                <h5 class="card-title">Recent News</h5>
+            </div>
+            <div class="card-body">
+                <ul class="activity-feed">
+                    <li class="feed-item">
+                        <div class="feed-date">May 26, 2022</div>
+                        <span class="feed-text"><a>Free expansion to Microsoft Flight Simulator helps you become a Top Gun pilot </a></span>
+                    </li>
+                    <li class="feed-item">
+                        <div class="feed-date">May 25, 2022</div>
+                        <span class="feed-text"><a>Meta selects Azure as strategic cloud provider to advance AI innovation and deepen PyTorch collaboration</a></span>
+                    </li>
+                    <li class="feed-item">
+                        <div class="feed-date">May 24, 2022</div>
+                        <span class="feed-text"><a>Azure OpenAI Service helps customers accelerate innovation with large AI models; Microsoft expands availability</a></span>
+                    </li>
+                    <li class="feed-item">
+                        <div class="feed-date">May 19, 2022</div>
+                        <span class="feed-text"><a>Xbox celebrates the gaming and disability community</a></span>
+                    </li>
+                    <li class="feed-item">
+                        <div class="feed-date">May 18, 2022</div>
+                        <span class="feed-text"><a>Microsoft TechSpark announces expansion to Jackson, Mississippi</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <a href="https://www.facebook.com/MicrosoftIndia/?brand_redir=20528438720">
+        <div class="card flex-fill fb sm-box">
+            <i class="fab fa-facebook"></i>
+            <h6>14M+</h6>
+            <p>Likes</p>
+        </div>
+    </a>
+    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <a href="https://twitter.com/Microsoft?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+        <div class="card flex-fill twitter sm-box">
+            <i class="fab fa-twitter"></i>
+            <h6>10M+</h6>
+            <p>Follows</p>
+        </div>
+    </a>
+    </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+            <a href="https://www.instagram.com/microsoft/?hl=en">
+            <div class="card flex-fill insta sm-box">
+                <i class="fab fa-instagram"></i>
+                <h6>3M+</h6>
+                <p>Follows</p>
+            </div>
+        </a>
+        </div>
+    <div class="col-xl-3 col-sm-6 col-12">
+        <a href="https://www.linkedin.com/company/microsoft/mycompany/verification/">
+        <div class="card flex-fill linkedin sm-box">
+            <i class="fab fa-linkedin-in"></i>
+            <h6>16M+</h6>
+            <p>Follows</p>
+        </div>
+    </a>
+    </div>
+</div>
+
+</div>
+{% include 'includes/chart.html' %}
+{% endblock %}
