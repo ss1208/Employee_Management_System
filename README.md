@@ -1,6 +1,7 @@
 ## Face Verification Based Login, Attendance Employee Management System
 ## About
-In this Attendance System the attendance for Employees is marked using Face verification. The Faculty has the permission to take Attendance, add a employee, modify employee details. The head can also send notifications to employees, and emplyees can also send feedback/requests to head which will be approved by Head . The head can also download the attendance sheet of the emplyees present<br>
+In this, the attendance for Employees is marked using Face verification. The Head/Admin has the permission to take Attendance, add a employee, modify employee details. The head can also send notifications to employees, and emplyees can also send feedback/requests to head which will be approved by Head . The head can also download the attendance sheet of the emplyees present<br>
+Also, the face recognition has been used for a two level authentication, wherein an employee is directed to the login page only after his face is authenticated by the camera. <br>
 The credentials for the Head are provided who has access to the whole database. Only the superuser can update the attendance of a employee.<br>
 **Django** web framework was used for the development of the whole web app. **OpenCv and face_recognition Library** were used for the development of Face Recognizer. The Face Recognizer can detect faces and mark their attendance into Database.<br>
 **Note: The dlib package required for installation of face_recognition api .**<br>
